@@ -1,0 +1,117 @@
+:root {
+    --clr-primary:hsl(227, 10%, 46%);
+    --clr-secondary-900: hsl(229, 23%, 23%);
+    --clr-secondary-900-sat: hsla(229, 23%, 23%, 0.05);
+    --clr-secondary-100: hsl(0, 0%, 59%);
+    --clr-neutral: hsl(0, 0%, 100%);
+    --clr-bg: hsl(185, 75%, 39%);
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+
+    background-image:
+        url(../assets/images/bg-pattern-top.svg),
+        url(../assets/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 52vw bottom 36vh, left 50vw top 50vh;
+
+    background-color: var(--clr-bg);
+    color: var(--clr-primary);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.125rem;
+
+    padding: 1.5rem;
+}
+
+@media (max-width: 28.125em) {
+    body {
+        background-position: right 33.5vw bottom 49vh, left 36vw top 45vh;
+    }
+}
+
+.bold {
+    font-weight: var(--fw-bold);
+}
+
+.card {
+    background-color: var(--clr-neutral);
+    max-width: 350px;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    margin: 0 auto 1rem;
+}
+
+.profile__hdr {
+    height: 140px;
+    background-image: url(../assets/images/bg-pattern-card.svg);
+}
+
+.profile__info{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 145px;
+
+    padding-bottom: 23px;
+}
+
+.info__img {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+
+    border: 6px solid var(--clr-neutral);
+    border-radius: 100%;
+}
+
+.info__user {
+    display: flex;
+    gap: 10px;
+}
+
+.user__name {
+    color: var(--clr-secondary-900);
+}
+
+.info__country {
+    font-size: 0.875rem;
+}
+
+.card__stats{
+    display: flex;
+    justify-content: space-between;
+
+    text-align: center;
+    border-top: 2px inset var(--clr-secondary-900-sat);
+    padding: 1.5rem ;
+}
+
+.card__stats div {
+    display: flex;
+    gap: 4px;
+    flex-direction: column-reverse;
+
+    flex-basis: 100px;
+}
+
+.stats__hdr{
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.stat{
+    color: var(--clr-secondary-900);
+}
+
